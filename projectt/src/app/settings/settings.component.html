@@ -1,0 +1,47 @@
+<aside  class="sidebar sidebar-light sidebar-right border-left" [ngClass]="{visible: settings.sidebar.right.visible  }">
+  <div [appScrollbar]="" style="height:100vh; overflow:hidden; position: relative" class="scroll">
+    <div class="sidebar-header pl-4 mb-8 pr-2 bg-dark text-white d-flex align-items-center" style="height: 3.8rem">
+      <h4  class="text-white mb-0" style="line-height: 3.8rem; flex:1">{{'Setting.Title'}}</h4>
+      <button class="btn btn-link btn-icon text-white p-0" (click)="toggleSettingsVisibility()"><i class="material-icons">close</i></button>
+    </div>
+
+
+    <div class="px-6 mb-8">
+      <h6 class="mb-2">Dark Sidebar</h6>
+      <p class="text-secondary mb-4">Choose a Dark Sidebar Theme</p>
+      <div class="d-flex " style="flex-wrap: wrap">
+        <button class="btn  no-shadow btn-icon btn-primary btn-xs mr-3 mb-4" (click)="settings.setSidebarTheme('dark', 'primary')"></button>
+        <button class="btn  no-shadow btn-icon btn-info btn-xs mr-3 mb-4" (click)="settings.setSidebarTheme('dark', 'info')"></button>
+        <button class="btn  no-shadow btn-icon btn-success btn-xs mr-3 mb-4" (click)="settings.setSidebarTheme('dark', 'success')"></button>
+        <button class="btn  no-shadow btn-icon btn-warning btn-xs mr-3 mb-4" (click)="settings.setSidebarTheme('dark', 'warning')"></button>
+        <button class="btn  no-shadow btn-icon btn-danger btn-xs mr-3 mb-4" (click)="settings.setSidebarTheme('dark', 'danger')"></button>
+        <button class="btn  no-shadow btn-icon btn-indigo btn-xs mr-3 mb-4" (click)="settings.setSidebarTheme('dark', 'indigo')"></button>
+        <button class="btn  no-shadow btn-icon btn-teal btn-xs mr-3 mb-4" (click)="settings.setSidebarTheme('dark', 'teal')"></button>
+        <button class="btn  no-shadow btn-icon btn-cyan btn-xs mr-3 mb-4" (click)="settings.setSidebarTheme('dark', 'cyan')"></button>
+
+      </div>
+
+    </div>
+    <div class="px-6 mb-8">
+      <h6 class="mb-2">Light Sidebar</h6>
+      <p class="text-secondary mb-4">Choose a Light Sidebar Theme</p>
+      <div class="d-flex " style="flex-wrap: wrap">
+        <button class="btn no-shadow btn-icon btn-primary btn-xs mr-3 mb-4" (click)="settings.setSidebarTheme('light', 'primary')"></button>
+        <button class="btn  no-shadow btn-icon btn-info btn-xs mr-3 mb-4" (click)="settings.setSidebarTheme('light', 'info')"></button>
+        <button class="btn  no-shadow btn-icon btn-success btn-xs mr-3 mb-4" (click)="settings.setSidebarTheme('light', 'success')"></button>
+        <button class="btn  no-shadow btn-icon btn-warning btn-xs mr-3 mb-4" (click)="settings.setSidebarTheme('light', 'warning')"></button>
+        <button class="btn  no-shadow btn-icon btn-danger btn-xs mr-3 mb-4" (click)="settings.setSidebarTheme('light', 'danger')"></button>
+        <button class="btn  no-shadow btn-icon btn-indigo btn-xs mr-3 mb-4" (click)="settings.setSidebarTheme('light', 'indigo')"></button>
+        <button class="btn  no-shadow btn-icon btn-teal btn-xs mr-3 mb-4" (click)="settings.setSidebarTheme('light', 'teal')"></button>
+        <button class="btn  no-shadow btn-icon btn-cyan btn-xs mr-3 mb-4" (click)="settings.setSidebarTheme('light', 'cyan')"></button>
+
+      </div>
+
+    </div>
+    <hr>
+   
+    <button (click)="switchLanguage('en')">en</button>
+    <button (click)="switchLanguage('fr')">fr</button> 
+  
+  </div>
+</aside>

@@ -1,0 +1,170 @@
+<div class="container-fluid">
+  <h5 class="px-2 mb-3">Form Elements - Input</h5>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            Input
+          </h5>
+          <p class="warning-tooltip">
+            Use a <code>.form-control</code> on Input for stylized Input Boxes
+          </p>
+          <div class="demo py-3 text-secondary">
+            <div class="row">
+              <div class="col">
+                <div class="form-group pr-4">
+                  <label for="sampleFormName">Default Input</label>
+                  <input type="text" class="form-control" id="sampleFormName" placeholder="Default">
+                </div>
+
+                <div class="form-group pr-4">
+                  <label for="sampleFormNameWarning">Valid Input</label>
+                  <input type="text" class="form-control is-warning" id="sampleFormNameWarning" placeholder="Success">
+                </div>
+              </div>
+              <div class="col px-4">
+                <div class="form-group">
+                  <label for="sampleFormNameValid">Valid Input</label>
+                  <input type="text" class="form-control is-valid" id="sampleFormNameValid" placeholder="Success">
+                </div>
+
+                <div class="form-group">
+                  <label for="sampleFormNameInvalid">Invalid Input</label>
+                  <input type="text" class="form-control is-invalid" id="sampleFormNameInvalid" placeholder="Failure">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h5>Input Groups</h5>
+          <p class="text-secondary"></p>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <br>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class="input-group-addon bg-white" id="basic-addon2">@example.com</span>
+          </div>
+          <br>
+          <label for="basic-url">Enter Your Email</label>
+          <div class="input-group">
+            <span class="input-group-addon bg-info text-white border-info" id="basic-addon3"><i class="material-icons">person</i></span>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+          </div>
+          <br>
+          <div class="input-group">
+            <span class="input-group-addon bg-success text-white border-success">$</span>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-addon bg-light">.00</span>
+          </div>
+          <br>
+          <div class="input-group">
+            <span class="input-group-addon bg-primary border-primary text-white">$</span>
+            <span class="input-group-addon bg-white">0.00</span>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h5 class="px-2 mb-3">Default Checkbox and Radio</h5>
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <h5>Default Checkboxes</h5>
+        </div>
+        <div class="card-body pt-0">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="">
+              Option one is this and that&mdash;be sure to include why it's great
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="" disabled>
+              Option two is disabled
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>Default Radio</h5>
+        </div>
+        <div class="card-body pt-0">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              Option one is this and that&mdash;be sure to include why it's great
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+              Option two can be something else and selecting it will deselect option one
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+              Option three is disabled
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h5 class="px-2 mb-3">Default Dropdowns</h5>
+  <div class="row">
+    <div class="col-lg-6 col-12">
+      <div class="card">
+        <div class="card-body">
+          <h5>Default Select</h5>
+          <p class="text-secondary">Use <code>.form-control</code> on select for proper styling</p>
+          <div class="form-group">
+           <label for="exampleFormControlSelect1">Example select</label>
+           <select class="form-control" id="exampleFormControlSelect1">
+             <option>1</option>
+             <option>2</option>
+             <option>3</option>
+             <option>4</option>
+             <option>5</option>
+           </select>
+         </div>
+         <div class="demo py-2">
+           <h5>Default Multi-Select</h5>
+           <p class="text-secondary">Use <code>.form-control</code> on select for proper styling</p>
+            <div class="form-group">
+              <label for="exampleFormControlSelect2">Example multiple select</label>
+              <select multiple class="form-control" id="exampleFormControlSelect2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+         </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            Modals
+          </h5>
+          <p class="text-secondary">
+            Use the <code>NgbModal</code> service to create Modals
+          </p>
+          <div>
+
+
+          <ng-template #content let-c="close" let-d="dismiss">
+            <div class="modal-header">
+              <h4 class="modal-title">UN Fedreation Ship</h4>
+              <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>The Launch Sequence has Begun</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-flat-primary" (click)="c('Close click')">Hurrah!</button>
+            </div>
+          </ng-template>
+
+          <button class="btn btn-primary" (click)="open(content)">Launch Space Ship</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

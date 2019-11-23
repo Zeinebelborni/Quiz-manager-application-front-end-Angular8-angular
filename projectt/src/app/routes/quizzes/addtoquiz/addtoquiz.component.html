@@ -1,0 +1,690 @@
+
+<div class="d-flex justify-content-between align-items-center">
+    <h5 class="section-title">
+      Select the Quiz and create your Question!
+
+    </h5>
+  </div>
+   
+  <ngb-tabset [justify]="currentJustify">
+      
+        <ngb-tab *ngFor="let a of fakeArray ,let iteration = index">
+            <ng-template ngbTabTitle><i class="material-icons mr-2">inbox</i> Quizz {{iteration+1}}</ng-template>
+          <ng-template ngbTabContent>
+            
+           
+    
+  
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 col-12">
+      <div class="card">
+          <div class="example-boundary">
+
+           
+                
+            
+          
+          
+              <div class="container-fluid">
+                  <div cdkDropList cdkDropListOrientation="horizontal" class="example-list1" style="text-align: center" >
+                      <div class="example-box" cdkDragBoundary=".example-boundary" draggable="true" cdkDrag (cdkDragStarted)="dragStarted($event)"  cdkDrag (cdkDragEnded)="dragend($event)" (cdkDragDropped)="drop_tf($event)"  >True/False</div>
+                      <div class="example-box" cdkDragBoundary=".example-boundary"   draggable="true" cdkDrag (cdkDragStarted)="dragStarted($event)"  cdkDrag (cdkDragEnded)="dragend($event)" (cdkDragDropped)="drop_m_choice_s($event)">Multiple choice (single select)</div>
+                      <div class="example-box" cdkDragBoundary=".example-boundary"   draggable="true" cdkDrag (cdkDragStarted)="dragStarted($event)"  cdkDrag (cdkDragEnded)="dragend($event)" (cdkDragDropped)="drop_m_choice_m($event)">Multiple choice (Multi select)</div>
+                      <div class="example-box" cdkDragBoundary=".example-boundary"  draggable="true" cdkDrag (cdkDragStarted)="dragStarted($event)"  cdkDrag (cdkDragEnded)="dragend($event)"  (cdkDragDropped)="drop_Entered_ans($event)" >Entered answer</div>
+                      <div class="example-box" cdkDragBoundary=".example-boundary"  draggable="true" cdkDrag (cdkDragStarted)="dragStarted($event)"  cdkDrag (cdkDragEnded)="dragend($event)"  (cdkDragDropped)="drop_Num_range($event)" >Number range</div>
+                      <div class="example-box"  cdkDragBoundary=".example-boundary"  draggable="true" cdkDrag (cdkDragStarted)="dragStarted($event)"  cdkDrag (cdkDragEnded)="dragend($event)" (cdkDragDropped)=" drop_Match_Item($event)">Match items </div>
+                    </div>
+    
+          
+           
+              <div class="row">
+                  <div class="col-lg-1 col-1">
+                  </div>
+                  <div class="col-lg-10 col-10">
+            
+              <div [ngClass]="{'drop_zone': dragged==false , 'drop_zone_hover':dragged==true }" style="height:700px" >
+                <div class="col-md-12">
+                    <i _ngcontent-dhe-c3="" class="material-icons right-button" >build</i>
+                    <div *ngIf="tf==false &&  m_choice_s==false &&
+                    m_choice_m==false && entered_ans ==false && Numb_range ==false
+                    && match_items==false; " class="contenu">
+                    <p>Drop element here <i class="material-icons">
+                      arrow_drop_down_circle
+                      </i></p>
+                
+                    </div>
+                     <!-- #the true or false section-->
+                       <div *ngIf="tf==true" style="margin-top:20px">
+                         <h1> <i _ngcontent-dhe-c3="" class="material-icons" >settings</i> True/False
+                            
+                         </h1>
+                         <div class="input-group mb-3" style="margin-top:20px">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1">Title</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                              </div>
+                              <select class="custom-select" id="inputGroupSelect01">
+                                <option selected>Choose...</option>
+                                <option value="1">History</option>
+                                <option value="2">Science computer</option>
+                                <option value="3">Geography</option>
+                                <option value="4">Entertainment</option>
+                                <option value="5">Sport</option>
+                              </select>
+                              <div class="input-group-prepend">
+                                  <label class="input-group-text" for="inputGroupSelect01">Difficulty</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01">
+                                  <option selected>Choose...</option>
+                                  <option value="1">Easy</option>
+                                  <option value="2">Medium</option>
+                                  <option value="3">Hard</option>
+                                </select>
+                          </div>
+                  
+                            <div class="input-group mb-3" style="margin-top: 12px">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">Upload</span>
+                                </div>
+                                <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                  <label class="custom-file-label" for="inputGroupFile01">  <i class="material-icons right:0">
+                                      attachment
+                                      </i>Choose file </label>
+                                </div>
+                              </div>
+                            
+                              <div class="container-fluid" style="margin-top: 18px">
+                                  
+                              <div class="custom-control custom-radio" style="margin-top: 10px ; margin-left: 30px">
+                                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="customRadio1" style="font-size:20px ">True</label>
+                                </div>
+                                <div class="custom-control custom-radio" style="margin-top: 10px ; margin-left: 30px">
+                                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" style="margin-left:10px">
+                                  <label class="custom-control-label" for="customRadio2" style="font-size:20px ">False</label>
+                                </div>
+                                 
+                                </div>
+                                <div class="container-fluid">
+                                  <div class="row">
+                                      <div class="col-md-3">
+                                    
+    
+                                            <div class="wrapper">
+                                                <div class="box">
+                                                  <div class="js--image-preview"></div>
+                                                  <div class="upload-options">
+                                                    <label>
+                                                      
+                                                      <input type="file" class="image-upload" accept="image/*" />
+                                                    </label>
+                                                  </div>
+                                                  <p style="margin-left: 35px ; margin-top: 40px" >Add photo <i class="material-icons">
+                                                      photo
+                                                      </i></p>
+                                                </div>
+    
+                                        </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="form-group shadow-textarea">
+                                                <label for="exampleFormControlTextarea6">Explanation</label>
+                                                <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..." style="height: 100px"></textarea>
+                                              </div>
+                                         </div>
+                                         <div class="container-fluid" style="text-align: right">
+                                         <button _ngcontent-nhk-c6="" class="btn mr-4 mb-4 btn-cyan btn_save " type="button"  >Save Quiz</button>
+                                        </div>     
+                                 </div>
+    
+                               </div> 
+    
+                                   
+                                  
+                                
+    
+                                      
+                               
+    
+                                   
+                       </div>
+                        <!-- #the Multiple Choice(single select) section-->
+                       <div *ngIf="m_choice_s==true" style="margin-top:20px">
+                          <h1> <i _ngcontent-dhe-c3="" class="material-icons" >settings</i> Multiple choice (single select)
+                             
+                          </h1>
+                          <div class="input-group mb-3" style="margin-top:20px">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon1">Title</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                                  </div>
+                                  <select class="custom-select" id="inputGroupSelect01">
+                                    <option selected>Choose...</option>
+                                    <option value="1">History</option>
+                                    <option value="2">Science computer</option>
+                                    <option value="3">Geography</option>
+                                    <option value="4">Entertainment</option>
+                                    <option value="5">Sport</option>
+                                  </select>
+                                  <div class="input-group-prepend">
+                                      <label class="input-group-text" for="inputGroupSelect01">Difficulty</label>
+                                    </div>
+                                    <select class="custom-select" id="inputGroupSelect01">
+                                      <option selected>Choose...</option>
+                                      <option value="1">Easy</option>
+                                      <option value="2">Medium</option>
+                                      <option value="3">Hard</option>
+                                    </select>
+                           </div>
+                   
+                             <div class="input-group mb-3" style="margin-top: 12px">
+                                 <div class="input-group-prepend">
+                                   <span class="input-group-text">Upload</span>
+                                 </div>
+                                 <div class="custom-file">
+                                   <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                   <label class="custom-file-label" for="inputGroupFile01">  <i class="material-icons right:0">
+                                       attachment
+                                       </i>Choose file </label>
+                                 </div>
+                               </div>
+    
+                               <label for="exampleFormControlTextarea6">Choices :</label>
+                               <div style="overflow-y: scroll; height:150px; background-color: honeydew">
+    
+                             
+                                <div *ngFor="let x of count" class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                      <div class="input-group-text">
+                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                      </div>
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Write answer here">
+                                    <button class="btn btn-outline-secondary" type="button"><i class="material-icons">
+                                        delete_forever
+                                        </i></button>
+                                
+                                  </div>
+    
+                                  
+                              </div>
+                              <div class="container-fluid" style="text-align: right ; height:30px">
+                                  <button _ngcontent-qtk-c6="" class="btn mr-4 mb-4 btn-outline-primary btn-pill" type="button" (click)="add_answer($event)">Add another answer</button>
+                            </div>  
+    
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                  
+    
+                                          <div class="wrapper">
+                                              <div class="box">
+                                                <div class="js--image-preview"></div>
+                                                <div class="upload-options">
+                                                  <label>
+                                                    
+                                                    <input type="file" class="image-upload" accept="image/*" />
+                                                  </label>
+                                                </div>
+                                                <p style="margin-left: 35px ; margin-top: 40px" >Add photo <i class="material-icons">
+                                                    photo
+                                                    </i></p>
+                                              </div>
+    
+                                      </div>
+                                      </div>
+                                      <div class="col-md-9">
+                                          <div class="form-group shadow-textarea">
+                                              <label for="exampleFormControlTextarea6">Explanation</label>
+                                              <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..." style="height: 100px"></textarea>
+                                            </div>
+                                       </div>
+                                       <div class="container-fluid" style="text-align: right">
+                                       <button _ngcontent-nhk-c6="" class="btn mr-4 mb-4 btn-cyan btn_save" type="button"  >Save Question</button>
+                                      </div>     
+                               </div>
+    
+                             </div> 
+                                
+                                
+                            </div>
+                              <!-- #the Multiple Choice(mutli select) section-->
+                       <div *ngIf="m_choice_m==true" style="margin-top:20px">
+                          <h1> <i _ngcontent-dhe-c3="" class="material-icons" >settings</i> Multiple choice (Multi select)
+                             
+                          </h1>
+                          <div class="input-group mb-3" style="margin-top:20px">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon1">Title</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                                  </div>
+                                  <select class="custom-select" id="inputGroupSelect01">
+                                    <option selected>Choose...</option>
+                                    <option value="1">History</option>
+                                    <option value="2">Science computer</option>
+                                    <option value="3">Geography</option>
+                                    <option value="4">Entertainment</option>
+                                    <option value="5">Sport</option>
+                                  </select>
+                                  <div class="input-group-prepend">
+                                      <label class="input-group-text" for="inputGroupSelect01">Difficulty</label>
+                                    </div>
+                                    <select class="custom-select" id="inputGroupSelect01">
+                                      <option selected>Choose...</option>
+                                      <option value="1">Easy</option>
+                                      <option value="2">Medium</option>
+                                      <option value="3">Hard</option>
+                                    </select>
+                           </div>
+                   
+                             <div class="input-group mb-3" style="margin-top: 12px">
+                                 <div class="input-group-prepend">
+                                   <span class="input-group-text">Upload</span>
+                                 </div>
+                                 <div class="custom-file">
+                                   <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                   <label class="custom-file-label" for="inputGroupFile01">  <i class="material-icons right:0">
+                                       attachment
+                                       </i>Choose file </label>
+                                 </div>
+                               </div>
+    
+                               <label for="exampleFormControlTextarea6">Choices :</label>
+                               <div style="overflow-y: scroll; height:150px; background-color: honeydew">
+    
+                             
+                                <div *ngFor="let x of count" class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                      <div class="input-group-text">
+                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                      </div>
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Write answer here">
+                                    <button class="btn btn-outline-secondary" type="button"><i class="material-icons">
+                                        delete_forever
+                                        </i></button>
+                                
+                                  </div>
+    
+                                  
+                              </div>
+                              <div class="container-fluid" style="text-align: right ; height:30px">
+                                  <button _ngcontent-qtk-c6="" class="btn mr-4 mb-4 btn-outline-primary btn-pill" type="button" (click)="add_answer($event)">Add another answer</button>
+                            </div>  
+    
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                  
+    
+                                          <div class="wrapper">
+                                              <div class="box">
+                                                <div class="js--image-preview"></div>
+                                                <div class="upload-options">
+                                                  <label>
+                                                    
+                                                    <input type="file" class="image-upload" accept="image/*" />
+                                                  </label>
+                                                </div>
+                                                <p style="margin-left: 35px ; margin-top: 40px" >Add photo <i class="material-icons">
+                                                    photo
+                                                    </i></p>
+                                              </div>
+    
+                                      </div>
+                                      </div>
+                                      <div class="col-md-9">
+                                          <div class="form-group shadow-textarea">
+                                              <label for="exampleFormControlTextarea6">Explanation</label>
+                                              <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..." style="height: 100px"></textarea>
+                                            </div>
+                                       </div>
+                                       <div class="container-fluid" style="text-align: right">
+                                       <button _ngcontent-nhk-c6="" class="btn mr-4 mb-4 btn-cyan btn_save" type="button"  >Save Question</button>
+                                      </div>     
+                               </div>
+    
+                             </div> 
+                                
+                                
+                            </div>
+                             <!-- #the entered answer section-->
+                            <div *ngIf ="entered_ans==true" style="margin-top:20px">
+                                  <h1> <i _ngcontent-dhe-c3="" class="material-icons" >settings</i> Entered Answer
+                                     
+                                  </h1>
+                                  <div class="input-group mb-3" style="margin-top:20px">
+                                      <div class="input-group-prepend">
+                                          <span class="input-group-text" id="basic-addon1">Title</span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                                          </div>
+                                          <select class="custom-select" id="inputGroupSelect01">
+                                            <option selected>Choose...</option>
+                                            <option value="1">History</option>
+                                            <option value="2">Science computer</option>
+                                            <option value="3">Geography</option>
+                                            <option value="4">Entertainment</option>
+                                            <option value="5">Sport</option>
+                                          </select>
+                                          <div class="input-group-prepend">
+                                              <label class="input-group-text" for="inputGroupSelect01">Difficulty</label>
+                                            </div>
+                                            <select class="custom-select" id="inputGroupSelect01">
+                                              <option selected>Choose...</option>
+                                              <option value="1">Easy</option>
+                                              <option value="2">Medium</option>
+                                              <option value="3">Hard</option>
+                                            </select>
+                                   </div>
+                           
+                                     <div class="input-group mb-3" style="margin-top: 12px">
+                                         <div class="input-group-prepend">
+                                           <span class="input-group-text">Upload</span>
+                                         </div>
+                                         <div class="custom-file">
+                                           <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                           <label class="custom-file-label" for="inputGroupFile01">  <i class="material-icons right:0">
+                                               attachment
+                                               </i>Choose file </label>
+                                         </div>
+                                       </div>
+                                       <form class="form-inline" style="margin-top: 20px">
+                                          <div class="form-group mb-2">
+                                            <label for="statictimeline" class="sr-only">timeline</label>
+                                            <input type="text" readonly class="form-control-plaintext" id="statictimeline" value="Timeline :" style="text-align: right" >
+                                          </div>
+                                          <div class="form-group mx-sm-3 mb-2">
+                                            <label for="inputPassword2" class="sr-only">--:--</label>
+                                            <input type="timeline" class="form-control" id="inputtimeline" placeholder="--:--">
+                                          </div>
+                                        </form>
+                                        <form class="form-inline" style="margin-top: 20px">
+                                          <div class="form-group mb-2">
+                                              <label for="staticNumber" class="sr-only">number </label>
+                                              <input type="text" readonly class="form-control-plaintext" id="staticNumber" value="Number of characters :" style="text-align: right" >
+                                            </div>
+                                            <div class="form-group mx-sm-3 mb-2">
+                                              <label for="inputPassword2" class="sr-only"></label>
+                                              <input type="number" class="form-control" id="inputNumer" placeholder="***">
+                                            </div>
+                                        </form>
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                              
+                
+                                                      <div class="wrapper">
+                                                          <div class="box">
+                                                            <div class="js--image-preview"></div>
+                                                            <div class="upload-options">
+                                                              <label>
+                                                                
+                                                                <input type="file" class="image-upload" accept="image/*" />
+                                                              </label>
+                                                            </div>
+                                                            <p style="margin-left: 35px ; margin-top: 40px" >Add photo <i class="material-icons">
+                                                                photo
+                                                                </i></p>
+                                                          </div>
+                
+                                                  </div>
+                                                  </div>
+                                                  <div class="col-md-9">
+                                                      <div class="form-group shadow-textarea">
+                                                          <label for="exampleFormControlTextarea6">Explanation</label>
+                                                          <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..." style="height: 100px"></textarea>
+                                                        </div>
+                                                   </div>
+                                                   <div class="container-fluid" style="text-align: right">
+                                                   <button _ngcontent-nhk-c6="" class="btn mr-4 mb-4 btn-cyan btn_save" type="button"  >Save Question</button>
+                                                  </div>     
+                                           </div>
+                
+                                         </div> 
+                             
+                
+                             </div>
+    
+    
+                            <!--# the number range section-->
+                            <div *ngIf="Numb_range==true" style="margin-top:20px">
+                                <h1> <i _ngcontent-dhe-c3="" class="material-icons" >settings</i>   Number Range
+                                   
+                                </h1>
+                                <div class="input-group mb-3" style="margin-top:20px">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">Title</span>
+                                      </div>
+                                      <input type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1">
+                                      <div class="input-group-prepend">
+                                          <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                                        </div>
+                                        <select class="custom-select" id="inputGroupSelect01">
+                                          <option selected>Choose...</option>
+                                          <option value="1">History</option>
+                                          <option value="2">Science computer</option>
+                                          <option value="3">Geography</option>
+                                          <option value="4">Entertainment</option>
+                                          <option value="5">Sport</option>
+                                        </select>
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="inputGroupSelect01">Difficulty</label>
+                                          </div>
+                                          <select class="custom-select" id="inputGroupSelect01">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Easy</option>
+                                            <option value="2">Medium</option>
+                                            <option value="3">Hard</option>
+                                          </select>
+                                 </div>
+                         
+                                   <div class="input-group mb-3" style="margin-top: 12px">
+                                       <div class="input-group-prepend">
+                                         <span class="input-group-text">Upload</span>
+                                       </div>
+                                       <div class="custom-file">
+                                         <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                         <label class="custom-file-label" for="inputGroupFile01">  <i class="material-icons right:0">
+                                             attachment
+                                             </i>Choose file </label>
+                                       </div>
+                                     </div>
+                                     
+                                     <div style="overflow-y: scroll; height:200px; background-color: honeydew ; margin-top:50px">
+    
+                             
+                                        <div *ngFor="let x of count_ , let iteration =index" class="input-group mb-3">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                  <span class="input-group-text" id="basic-addon1"># {{iteration+1}}</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="write here" aria-label="ranged_answers" aria-describedby="basic-addon1">
+                                              </div>
+                                        
+                                          </div>
+                                        
+                
+            
+                                          
+                                      </div>
+                                      <div class="container-fluid" style="text-align: right ; height:30px">
+                                          <button _ngcontent-qtk-c6="" class="btn mr-4 mb-4 btn-outline-primary btn-pill" type="button">Add another one</button>
+                                    </div>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                          
+            
+                                                  <div class="wrapper">
+                                                      <div class="box">
+                                                        <div class="js--image-preview"></div>
+                                                        <div class="upload-options">
+                                                          <label>
+                                                            
+                                                            <input type="file" class="image-upload" accept="image/*" />
+                                                          </label>
+                                                        </div>
+                                                        <p style="margin-left: 35px ; margin-top: 40px" >Add photo <i class="material-icons">
+                                                            photo
+                                                            </i></p>
+                                                      </div>
+            
+                                              </div>
+                                              </div>
+                                              <div class="col-md-9">
+                                                  <div class="form-group shadow-textarea">
+                                                      <label for="exampleFormControlTextarea6">Explanation</label>
+                                                      <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..." style="height: 100px"></textarea>
+                                                    </div>
+                                               </div>
+                                               <div class="container-fluid" style="text-align: right">
+                                               <button _ngcontent-nhk-c6="" class="btn mr-4 mb-4 btn-cyan btn_save" type="button"  >Save Question</button>
+                                              </div>     
+                                       </div>
+            
+                                     </div> 
+    
+    
+                            </div>
+                               <!--# the Match items section-->
+                               <div *ngIf="match_items==true" style="margin-top:20px">
+                                  <h1> <i _ngcontent-dhe-c3="" class="material-icons" >settings</i>  Match Items
+                                     
+                                  </h1>
+                                  <div class="input-group mb-3" style="margin-top:20px">
+                                     <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">Title</span>
+                                      </div>
+                                      <input type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1">
+                                      <div class="input-group-prepend">
+                                          <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                                        </div>
+                                        <select class="custom-select" id="inputGroupSelect01">
+                                          <option selected>Choose...</option>
+                                          <option value="1">History</option>
+                                          <option value="2">Science computer</option>
+                                          <option value="3">Geography</option>
+                                          <option value="4">Entertainment</option>
+                                          <option value="5">Sport</option>
+                                        </select>
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="inputGroupSelect01">Difficulty</label>
+                                          </div>
+                                          <select class="custom-select" id="inputGroupSelect01">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Easy</option>
+                                            <option value="2">Medium</option>
+                                            <option value="3">Hard</option>
+                                          </select>
+                                   </div>
+                           
+                                     <div class="input-group mb-3" style="margin-top: 12px">
+                                         <div class="input-group-prepend">
+                                           <span class="input-group-text">Upload</span>
+                                         </div>
+                                         <div class="custom-file">
+                                           <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                           <label class="custom-file-label" for="inputGroupFile01">  <i class="material-icons right:0">
+                                               attachment
+                                               </i>Choose file </label>
+                                         </div>
+                                       </div>
+                                       <label for="exampleFormControlTextarea6" style="margin-top: 6px">Items :</label>
+                                       <div style="overflow-y: scroll; height:200px; background-color: honeydew ; margin-top:6px">
+    
+                                          <div *ngFor="let x of count_" class="input-group mb-3">
+                                           
+                                              
+                                                  <div class="row_">
+                                                    <div class="col">
+                                                      <input type="text" class="form-control" placeholder="Write item here ">
+                                                    </div>
+                                                    <div class="col">
+                                                      <input type="text" class="form-control" placeholder="Write it's match here">
+                                                    </div>
+                                                    <button _ngcontent-mir-c6="" class="btn mr-4 mb-4 btn-outline-secondary" type="button"><i class="material-icons">
+                                                        delete_forever
+                                                        </i></button>
+                                                    
+                                                      
+                                                  </div>
+                                                
+                                                
+                                          
+                                            </div>
+                                          
+                  
+              
+                                            
+                                        </div>
+                                        <div class="container-fluid" style="text-align: right ; height:30px">
+                                            <button _ngcontent-hhl-c6="" class="btn mr-4 mb-4 btn-outline-primary btn-pill" type="button">Add another Item</button>
+                                      </div>
+                                      <div class="container-fluid">
+                                          <div class="row">
+                                              <div class="col-md-3">
+                                            
+              
+                                                    <div class="wrapper">
+                                                        <div class="box">
+                                                          <div class="js--image-preview"></div>
+                                                          <div class="upload-options">
+                                                            <label>
+                                                              
+                                                              <input type="file" class="image-upload" accept="image/*" />
+                                                            </label>
+                                                          </div>
+                                                          <p style="margin-left: 35px ; margin-top: 40px" >Add photo <i class="material-icons">
+                                                              photo
+                                                              </i></p>
+                                                        </div>
+              
+                                                </div>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="form-group shadow-textarea">
+                                                        <label for="exampleFormControlTextarea6">Explanation</label>
+                                                        <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..." style="height: 100px"></textarea>
+                                                      </div>
+                                                 </div>
+                                                 <div class="container-fluid" style="text-align: right">
+                                                 <button _ngcontent-nhk-c6="" class="btn mr-4 mb-4 btn-cyan btn_save" type="button"  >Save Question</button>
+                                                </div>     
+                                         </div>
+              
+                                       </div> 
+      
+      
+                              </div>
+                </div>
+              
+            </div>
+            </div>
+            </div>
+            
+           
+        </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+</ng-template>
+</ngb-tab>
+
+ 

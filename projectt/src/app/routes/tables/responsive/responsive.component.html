@@ -1,0 +1,313 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <div class="card">
+        <div class="card-header">
+          <h5>Responsive Tables</h5>
+        </div>
+        <div class="card-body">
+          <p class="text-secondary">
+            Tables are one of the hardest components to show properly on a smaller screen, Simplify Admin provides css utilties to make this task easier.
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <h5 class="section-title">
+    Responsive Table
+  </h5>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>Using Responsive Table</h5>
+        </div>
+        <div class="card-body">
+          <p class="text-secondary">
+            To create a responsive table start by adding <code>.rt-[[breakpoint]]</code> to your table (where breakpoint is one of <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>  ).
+            This adds a display flex on table rows below the used breakpoint
+            <br />
+
+            Remember that responsive tables use downward breakpoints, so the responsive utitlity classes would affect table for screen sizes lower than used breakpoint.
+          </p>
+
+          <p class="text-secondary">
+            The following table turns flex at <code>sm</code> (screen size smaller than 992px) . Go ahead reduce ur screen size or browse on your phone to test
+          </p>
+          <table class="table table-middle rt-sm">
+            <thead class="rt-table-hide">
+              <tr>
+
+
+                <th>Project</th>
+                <th>Lead</th>
+                <th>Progress</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+
+                <td class="rt-full">
+                  <div class="text-secondary mb-2 d-none rt-table-block">
+                    Project
+                  </div>
+                  Alexa Space AI
+                </td>
+                <td class="rt-full">
+                  <div class="text-secondary mb-2 d-none rt-table-block">
+                    Lead
+                  </div>
+                  <img src="http://via.placeholder.com/256x256" alt="" class="img-thumb-sm mr-3">
+                  Peter Stacy
+                </td>
+                <td style="" class="rt-full">
+                  <div class="progress progress-thin">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+
+                <td class="rt-full">
+                  <div class="text-secondary mb-2 d-none rt-table-block">
+                    Project
+                  </div>
+                  Research and Dev
+                </td>
+                <td class="rt-full">
+                  <div class="text-secondary mb-2 d-none rt-table-block">
+                    Lead
+                  </div>
+                  <img src="http://via.placeholder.com/256x256" alt="" class="img-thumb-sm mr-3">
+                  Kenny Sewalk
+                </td>
+                <td style="" class="rt-full">
+                  <div class="progress progress-thin">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+
+                <td class="rt-full">
+                  <div class="text-secondary mb-2 d-none rt-table-block">
+                    Project
+                  </div>
+                  Quality Control
+                </td>
+                <td class="rt-full">
+                  <div class="text-secondary mb-2 d-none rt-table-block">
+                    Lead
+                  </div>
+                  <img src="http://via.placeholder.com/256x256" alt="" class="img-thumb-sm mr-3">
+                  Joseph Dory
+                </td>
+                <td style="" class="rt-full">
+                  <div class="progress progress-thin">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+
+
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h5>Demo</h5>
+        </div>
+        <div class="card-body">
+
+          <p class="text-secondary">
+            The same table as above turning flex for all screens
+          </p>
+          <table class="table table-middle rt">
+            <thead class="rt-table-hide">
+              <tr>
+
+
+                <th>Project</th>
+                <th>Lead</th>
+                <th>Progress</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+
+                <td class="rt-full">
+                  <div class="text-secondary mb-2 d-none rt-table-block">
+                    Project
+                  </div>
+                  Alexa Space AI
+                </td>
+                <td class="rt-full">
+                  <div class="text-secondary mb-2 d-none rt-table-block">
+                    Lead
+                  </div>
+                  <img src="http://via.placeholder.com/256x256" alt="" class="img-thumb-sm mr-3">
+                  Peter Stacy
+                </td>
+                <td style="" class="rt-full">
+                  <div class="progress progress-thin">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+
+                <td class="rt-full">
+                  <div class="text-secondary mb-2 d-none rt-table-block">
+                    Project
+                  </div>
+                  Research and Dev
+                </td>
+                <td class="rt-full">
+                  <div class="text-secondary mb-2 d-none rt-table-block">
+                    Lead
+                  </div>
+                  <img src="http://via.placeholder.com/256x256" alt="" class="img-thumb-sm mr-3">
+                  Kenny Sewalk
+                </td>
+                <td style="" class="rt-full">
+                  <div class="progress progress-thin">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+
+                <td class="rt-full">
+                  <div class="text-secondary mb-2 d-none rt-table-block">
+                    Project
+                  </div>
+                  Quality Control
+                </td>
+                <td class="rt-full">
+                  <div class="text-secondary mb-2 d-none rt-table-block">
+                    Lead
+                  </div>
+                  <img src="http://via.placeholder.com/256x256" alt="" class="img-thumb-sm mr-3">
+                  Joseph Dory
+                </td>
+                <td style="" class="rt-full">
+                  <div class="progress progress-thin">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+
+
+        </div>
+      </div>
+
+
+
+      <div class="card">
+        <div class="card-header">
+          <h5>Utilites</h5>
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>
+                  Element
+                </th>
+                <th>
+                  Class
+                </th>
+                <th>
+                  Use
+                </th>
+              </tr>
+            </thead>
+            <tr>
+              <td>
+                table
+              </td>
+              <td>
+                <code>.rt-[[breakpoint]]</code>
+              </td>
+              <td>
+                Use to turn table rows to <code>display:flex</code> for screens smaller than used breakpoint
+              </td>
+            </tr>
+            <tr>
+              <td>
+                td
+              </td>
+              <td>
+                <code>.rt-full</code>
+              </td>
+              <td>
+                Use to turn table rows to <code>display:flex</code> for screens smaller than used breakpoint
+              </td>
+            </tr>
+            <tr>
+              <td>
+                td
+              </td>
+              <td>
+                <code>.rt-header</code>
+              </td>
+              <td>
+                Turn element to a bold heading style on smaller screens
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Any
+              </td>
+              <td>
+                <code>.rt-table-hide</code>
+              </td>
+              <td>
+                Hide an element on smaller screens
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Any
+              </td>
+              <td>
+                <code>.d-none.rt-table-block</code>
+              </td>
+              <td>
+                Show as element as block only on smaller screens
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                Any
+              </td>
+              <td>
+                <code>.d-none.rt-table-inline</code>
+              </td>
+              <td>
+                Show an element as inline only on smaller screens
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

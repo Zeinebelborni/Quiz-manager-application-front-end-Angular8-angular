@@ -1,0 +1,200 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <div class="card">
+        <div class="card-header">
+          <h5>Tabs</h5>
+        </div>
+        <div class="card-body">
+          <p class="text-secondary">
+            Simplify Admin improves tabs with more colors and a new Material Style
+          </p>
+          <p class="text-secondary">
+            For the angular version use <code>ngb-tabset</code> directive provided by ng-bootstrap
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-12">
+    <h5 class="section-title">Tabs</h5>
+    <div class="card">
+      <div class="card-header">
+        <h5 class="mb-4">Material Tabs</h5>
+        <p class="text-secondary mb-0">
+          Add <code>Use .nav-material</code> on tabs for modern material styled tabs. If you are using ng-bootstrap add <code>type="material"</code>
+        </p>
+      </div>
+      <div class="card-body px-2 py-0">
+
+        <ngb-tabset type="material">
+          <ngb-tab title="Spaceships">
+            <ng-template ngbTabContent>
+              <div class="py-3 px-4">
+                <div class="py-4">
+                    <img class="img-fluid mr-4 mb-4 mb-lg-0" src="http://via.placeholder.com/1125x750" alt="Space Shuttle Launch" style="width:20rem">
+                    <img class="img-fluid mr-4 mb-4 mb-lg-0" src="http://via.placeholder.com/1125x750" alt="Space Shuttle Launch" style="width:20rem">
+                    <img class="img-fluid" src="http://via.placeholder.com/1125x750" alt="Space Shuttle Launch" style="width:20rem">
+                </div>
+                <p class="text-secondary">There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally,it is a task to occupy the generations.
+                <br> And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+              </div>
+
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+            <ng-template ngbTabTitle>Space Pilots</ng-template>
+            <ng-template ngbTabContent>
+              <div class="py-3 px-4">
+                <div class="py-4">
+                    <img class="img-fluid mr-4 mb-4 mb-lg-0" src="http://via.placeholder.com/256x256" alt="Space Shuttle Launch" style="width:10rem">
+                    <img class="img-fluid mr-4 mb-4 mb-lg-0" src="http://via.placeholder.com/256x256" alt="Space Shuttle Launch" style="width:10rem">
+                    <img class="img-fluid" src="http://via.placeholder.com/256x256" alt="Space Shuttle Launch" style="width:10rem">
+                </div>
+              <p>If you could see the earth illuminated when you were in a place as dark as night, it would look to you more splendid than the moon.</p>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="Disabled" [disabled]="true">
+            <ng-template ngbTabContent>
+              <div class="py-3 px-4">
+
+              <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore . . . </p>
+              </div>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+
+      </div>
+
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h5 class="mb-4">Colored Material Tabs</h5>
+        <p class="text-secondary mb-0">
+          Add <code>Use .nav-material-[variation]</code> on tabs for for changing color.
+          If you are using ng-bootstrap add <code>type="material nav-material-[varitaion]"</code>
+        </p>
+      </div>
+      <div class="card-body px-2 py-0">
+
+        <ngb-tabset type="material nav-material-success">
+          <ngb-tab title="Spaceships">
+            <ng-template ngbTabContent>
+              <div class="py-3 px-4">
+
+                <p class="text-secondary">There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally,it is a task to occupy the generations.
+                <br> And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+              </div>
+
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+            <ng-template ngbTabTitle>Space Pilots</ng-template>
+            <ng-template ngbTabContent>
+              <div class="py-3 px-4">
+
+              <p>If you could see the earth illuminated when you were in a place as dark as night, it would look to you more splendid than the moon.</p>
+              </div>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+
+      </div>
+
+    </div>
+
+
+    <div class="card">
+      <div class="card-header">
+        <h5 class="mb-4">Pill Tabs</h5>
+        <p class="text-secondary mb-0">
+          Add <code>Use .nav-pills</code> on tabs for pill tabs. If you are using ng-bootstrap add <code>type="pills"</code>
+        </p>
+      </div>
+      <div class="card-body py-0">
+
+        <ngb-tabset type="pills">
+          <ngb-tab title="Objects">
+            <ng-template ngbTabContent>
+              <div class="py-3 px-4">
+                <div class="py-4">
+                    <img class="img-fluid mr-4 mb-4 mb-lg-0" src="http://via.placeholder.com/1125x750" alt="Space Shuttle Launch" style="width:20rem">
+                    <img class="img-fluid mr-4 mb-4 mb-lg-0" src="http://via.placeholder.com/1125x750" alt="Space Shuttle Launch" style="width:20rem">
+                    <img class="img-fluid" src="http://via.placeholder.com/1125x750" alt="Space Shuttle Launch" style="width:20rem">
+                </div>
+                <p class="text-secondary">There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally,it is a task to occupy the generations.
+                <br> And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+              </div>
+
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+            <ng-template ngbTabTitle>Space Pilots</ng-template>
+            <ng-template ngbTabContent>
+              <div class="py-3 px-4">
+                <div class="py-4">
+                    <img class="img-fluid mr-4" src="http://via.placeholder.com/256x256" alt="Space Shuttle Launch" style="width:10rem">
+                    <img class="img-fluid mr-4" src="http://via.placeholder.com/256x256" alt="Space Shuttle Launch" style="width:10rem">
+                    <img class="img-fluid" src="http://via.placeholder.com/256x256" alt="Space Shuttle Launch" style="width:10rem">
+                </div>
+              <p>If you could see the earth illuminated when you were in a place as dark as night, it would look to you more splendid than the moon.</p>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="Disabled" [disabled]="true">
+            <ng-template ngbTabContent>
+              <div class="py-3 px-4">
+
+              <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore . . . </p>
+              </div>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+
+      </div>
+
+    </div>
+
+
+    <div class="card">
+      <div class="card-header">
+        <h5 class="mb-4">Colored Pill Tabs</h5>
+        <p class="text-secondary mb-0">
+          Add <code>Use .nav-pills-[variation]</code> on tabs for for changing color.
+          If you are using ng-bootstrap add <code>type="pills nav-pills-[varitaion]"</code>
+        </p>
+      </div>
+      <div class="card-body">
+
+        <ngb-tabset type="pills nav-info-teal">
+          <ngb-tab title="Spaceships">
+            <ng-template ngbTabContent>
+              <div class="py-3 px-4">
+
+                <p class="text-secondary">There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally,it is a task to occupy the generations.
+                <br> And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+              </div>
+
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+            <ng-template ngbTabTitle>Space Pilots</ng-template>
+            <ng-template ngbTabContent>
+              <div class="py-3 px-4">
+
+              <p>If you could see the earth illuminated when you were in a place as dark as night, it would look to you more splendid than the moon.</p>
+              </div>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+
+      </div>
+
+    </div>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,136 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <div class="card">
+        <div class="card-header">
+          <h5>Plotly.js</h5>
+        </div>
+        <div class="card-body">
+          <p class="text-secondary">
+            Plotly.js creates great interactive charts with a lot of functionality and flexibility. It uses <code>svg</code>
+          </p>
+          <p class="text-secondary">
+            Simplify Admin provides the <code>PlotlyDirective</code> to create a Plotly.js chart. Simply pass the chart data as Input to the directive.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h5 class="section-title">
+    Basic Charts
+  </h5>
+  <div class="row">
+    <div class="col-lg-6 col-12">
+      <div class="card">
+      <div class="card-header pb-0">
+          <h5>
+            Line Chart
+          </h5>
+      </div>
+        <div class="card-body pt-0">
+
+
+          <div class="chart-container">
+
+            <div [appPlotly]="demodata[0].data"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-12">
+      <div class="card">
+      <div class="card-header pb-0">
+          <h5>
+            Bar Chart
+          </h5>
+      </div>
+        <div class="card-body pt-0">
+
+
+          <div class="chart-container">
+
+            <div [appPlotly]="demodata[1].data"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-12">
+      <div class="card">
+      <div class="card-header pb-0">
+          <h5>
+            Pie Chart
+          </h5>
+      </div>
+        <div class="card-body pt-0">
+
+
+          <div class="chart-container">
+
+            <div [appPlotly]="demodata[2].data"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-12">
+      <div class="card">
+      <div class="card-header pb-0">
+          <h5>
+            Scatter Chart
+          </h5>
+      </div>
+        <div class="card-body pt-0">
+
+
+          <div class="chart-container">
+
+            <div [appPlotly]="demodata[3].data"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <h5 class="section-title">
+    Advanced Charts
+  </h5>
+  <div class="row">
+    <div class="col-lg-6 col-12">
+      <div class="card">
+      <div class="card-header pb-0">
+          <h5>
+            Box Plot
+          </h5>
+      </div>
+        <div class="card-body pt-0">
+
+
+          <div class="chart-container">
+
+            <div [appPlotly]="demodata[4].data"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-12">
+      <div class="card">
+      <div class="card-header pb-0">
+          <h5>
+            Horizontal Bar Chart
+          </h5>
+      </div>
+        <div class="card-body pt-0">
+
+
+          <div class="chart-container">
+
+            <div [appPlotly]="demodata[5].data"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

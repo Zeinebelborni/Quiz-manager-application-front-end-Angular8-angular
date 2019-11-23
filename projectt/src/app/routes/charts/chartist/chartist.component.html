@@ -1,0 +1,116 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <div class="card">
+        <div class="card-header">
+          <h5>Chartist</h5>
+        </div>
+        <div class="card-body">
+          <p class="text-secondary">
+            Chartist creates flexible, simple and responsive charts. It is free and Open Source. Chartist uses <code>&lt;svg&gt;</code>
+          </p>
+          <p class="text-secondary">
+            Simplify Admin provides the <code>ChartistDirective</code> to create Chartist Charts. Simply pass the chart data and options as Input to the directive.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h5 class="section-title">
+    Basic Charts
+  </h5>
+  <div class="row">
+    <div class="col-lg-6 col-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Bar Chart
+          </h5>
+        </div>
+        <div class="card-body card-body-p">
+          <div class="chart-container">
+            <div appChartist="bar" [chartdata]="demodata[0].data"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Area Chart
+          </h5>
+        </div>
+        <div class="card-body card-body-p">
+          <div class="chart-container">
+            <div appChartist="area" [chartdata]="demodata[1].data" [options]="demodata[1].options"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Pie Chart
+          </h5>
+        </div>
+        <div class="card-body card-body-p">
+          <div class="chart-container" style="max-width:40rem">
+            <div appChartist="pie" [chartdata]="demodata[2].data"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Scatter Chart
+          </h5>
+        </div>
+        <div class="card-body card-body-p">
+          <div class="chart-container">
+            <div appChartist="scatter" [chartdata]="demodata[3].data"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h5 class="section-title">
+    Advanced Charts
+  </h5>
+  <div class="row">
+    <div class="col-lg-6 col-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            BiPolar Bar Chart
+          </h5>
+        </div>
+        <div class="card-body card-body-p">
+          <div class="chart-container px-3 py-6" style="">
+            <div appChartist="bar" [chartdata]="demodata[4].data"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>
+            Bipolar Area Chart
+          </h5>
+        </div>
+        <div class="card-body card-body-p">
+          <div class="chart-container">
+            <div appChartist="area" [chartdata]="demodata[5].data"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

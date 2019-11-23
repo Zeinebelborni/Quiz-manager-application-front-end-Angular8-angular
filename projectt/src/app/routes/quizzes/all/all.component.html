@@ -1,0 +1,144 @@
+<button class="btn btn-danger btn-fab fixed-bottom-right" title="New Quizz" (click)="router.navigate(['/quizzes/single']);"><i class="material-icons">add</i></button>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-lg-2 col-12">
+      </div>
+    <div class="col-lg-4 col-12">
+      <div class="card">
+        <div class="d-flex">
+          <div class="px-4 bg-light d-flex align-items-center border-right">
+            <div class="px-3 text-info text-size-7">
+              <i class="material-icons">mail</i>
+            </div>
+
+          </div>
+          <div class="media-body">
+            <div class="text-center py-4 px-4">
+              <h3> 4 </h3>
+              <p class="my-0 text-secondary">Quiz</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-lg-4 col-12">
+      <div class="card">
+        <div class="d-flex">
+          <div class="px-4 bg-light d-flex align-items-center" style="border-right: 1px solid #eee">
+            <div class="px-3 text-success text-size-7">
+              <i class="material-icons">group_work</i>
+            </div>
+
+          </div>
+          <div class="media-body">
+            <div class="text-center py-4 px-4">
+              <h3> 8 </h3>
+              <p class="my-0 text-secondary">Categories</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+  </div>
+  <div class="card">
+    
+      <ngb-tabset [justify]="currentJustify">
+      
+        <ngb-tab *ngFor="let a of fakeArray ,let iteration = index">
+            <ng-template ngbTabTitle><i class="material-icons mr-2">person</i> Quizz {{iteration+1}}</ng-template>
+          <ng-template ngbTabContent>
+  <div class="row">
+    <div class="col-12">
+     
+      <div class="card">
+        
+       
+          <table class="table table-middle table-material rt-md">
+            <thead class="rt-table-hide">
+              <tr>
+
+                <th>
+                  Questions
+                </th>
+                <th>
+                   Date
+                </th>
+
+
+                <th>
+                  Category
+                </th>
+                <th>
+                    Type
+                  </th>
+                <th>
+                  Difficulty
+                </th>
+                <th>
+                    Delete
+                  </th>
+              </tr>
+
+
+            </thead>
+            <tbody *ngIf="Quizs">
+              <tr *ngFor="let quiz of Quizs.results">
+                <td class="rt-header" >
+                  
+                    <i class="material-icons text-secondary mr-3">info</i> {{quiz.question}}
+                </td>
+                <td class="rt-full">
+                  <i class="material-icons text-secondary" style="vertical-align:middle; line-height: 1">event</i>
+                    Jan 12 2018  <span class="text-secondary ml-1 d-none rt-table-inline">Due Date</span>
+                </td>
+
+                <td class="rt-full">
+                  <div class="text-secondary mb-2 d-none rt-table-block">
+                    Project Lead
+                  </div>
+                  
+                  <a class="text-info">{{quiz.category}}</a>
+                </td>
+                <td class="rt-full">
+                    <div class="text-secondary mb-2 d-none rt-table-block">
+                      Project Lead
+                    </div>
+                    
+                    <a class="text-info">{{quiz.type}}</a>
+                  </td>
+               
+                <td class="rt-full" style="width: 15rem">
+                  <div class="progress progress-thin">
+                     <div class="progress-bar bg-warning" style="width:30%"  *ngIf="quiz.difficulty=='easy'"></div>
+                     <div class="progress-bar bg-info" style="width:60%"  *ngIf="quiz.difficulty=='medium'"></div>
+                     <div class="progress-bar bg-danger" style="width:100%"  *ngIf="quiz.difficulty=='hard'"></div>
+                  
+                  </div>
+                  
+
+                </td>
+                <td>
+                    <button _ngcontent-mir-c6="" class="btn mr-4 mb-4 btn-outline-dark" type="button"><i class="material-icons">
+                        delete_forever
+                        </i></button>
+                </td>
+              </tr>
+              
+
+            </tbody>
+          </table>
+        
+      </div>
+    </div>
+  </div>
+  </ng-template>
+        </ngb-tab>
+       
+  </ngb-tabset>
+  
+  </div>
+
+</div>

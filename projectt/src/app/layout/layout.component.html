@@ -1,0 +1,17 @@
+<div class="full-page"  (swipeleft)="settings.hideSidebar('left')" (swiperight)="settings.showSidebar('left')">
+  <div class="sidebar-container">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="page" [ngClass]="{'no-sidebar': settings.sidebar.left.collapsed}">
+    <div class="topbar-container">
+      <app-topbar></app-topbar>
+    </div>
+    <div class="page-content" (click)="settings.hideSidebar('left')">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="sidebar-right-container">
+      <app-settings></app-settings>
+    </div>
+  </div>
+
+</div>

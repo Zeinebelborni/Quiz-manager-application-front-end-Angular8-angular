@@ -1,0 +1,95 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-7 col-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            Dropdowns
+          </h5>
+          <p class="text-secondary">
+            Use the ng-bootstrap <code>ngbDropdown</code> component with <code>ngDropdownToggle</code> and <code>ngbDropdownMenu</code> for dropdowns
+          </p>
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Select a Starship</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item">XLC - 1 Enterprise</button>
+              <button class="dropdown-item"> XLC -2 Antares</button>
+              <button class="dropdown-item">Surprise Me!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h5 class="px-2 mb-4">Positioning</h5>
+  <div class="row">
+    <div class="col-lg-6 col-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+          Bottom Left
+          </h5>
+          <p class="text-secondary">
+            Dropdowns are positioned to bottom with alignment to left by default
+          </p>
+          <div ngbDropdown class="d-inline-block" placement="bottom-left">
+            <button class="btn btn-outline-success mb-4" id="dropdownBasic1" ngbDropdownToggle>Select a Starship</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item">XLC - 1 Enterprise</button>
+              <button class="dropdown-item"> XLC -2 Antares</button>
+              <button class="dropdown-item">Surprise Me!</button>
+            </div>
+          </div>
+          <h5 class="card-title">
+            Bottom Right
+          </h5>
+          <p class="text-secondary">
+            Use <code>placement="bottom-right"</code> to align dropdown to right
+          </p>
+          <div ngbDropdown class="d-inline-block mb-4" placement="bottom-right">
+            <button class="btn btn-outline-info" id="dropdownBasic1" ngbDropdownToggle>Select a Starship</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item">XLC - 1 Enterprise</button>
+              <button class="dropdown-item"> XLC -2 Antares</button>
+              <button class="dropdown-item">Surprise Me!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            Top Left
+          </h5>
+          <p class="text-secondary">
+            Use <code>placement="top-left"</code> for a dropup Menu aligned to left
+          </p>
+          <div ngbDropdown class="d-inline-block mb-4" placement="top-left">
+            <button class="btn btn-outline-info" id="dropdownBasic1" ngbDropdownToggle>Select a Starship</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item">XLC - 1 Enterprise</button>
+              <button class="dropdown-item"> XLC -2 Antares</button>
+              <button class="dropdown-item">Surprise Me!</button>
+            </div>
+          </div>
+          <h5 class="card-title">
+            Top Right
+          </h5>
+          <p class="text-secondary">
+            Use <code>placement="top-right"</code> for a dropup Menu aligned to right
+          </p>
+          <div ngbDropdown class="d-inline-block mb-4" placement="top-right">
+            <button class="btn btn-outline-warning" id="dropdownBasic1" ngbDropdownToggle>Select a Starship</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item">XLC - 1 Enterprise</button>
+              <button class="dropdown-item"> XLC -2 Antares</button>
+              <button class="dropdown-item">Surprise Me!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
